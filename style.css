@@ -1,0 +1,595 @@
+*{
+    /* margin: 0; */
+    font-family: 'raleway', sans-serif;
+    color: #fff;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-image: url(images/background/fabric.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: top left;
+}
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+/* start for bar ------------------- 1694*/
+.bar{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 40px;
+    display: flex;
+    padding: 10px;
+    width: auto;
+}
+.private{
+    width: 50%;
+    margin: auto 10px;
+    display: flex;
+    float: left;
+}
+.private p{
+    font-size: 12px;
+    margin: 10px;
+}
+.private a{
+    text-decoration: none;
+}
+.private img{
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    filter: brightness(0) invert(1);
+    transition: filter 1s;
+}
+.private img:hover{
+    filter: brightness(0) invert(0.5);
+}
+.private p:hover{
+    font-style: italic;
+}
+.medsos{
+    width: 50%;
+    float: right;
+    margin: auto 10px;
+}
+.medsos img{
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-left: 10px;
+    filter: brightness(0) invert(1);
+    transition: transform 1s;
+}
+.medsos img:hover{
+    filter: brightness(0) invert(0.5);
+    transform: scale(1.2);
+}
+/* end for bar ------------------ 1694 */
+.header{
+    background-color: rgba(0, 0, 0, 0.534);
+    height: 120px;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+.left-header{
+    background-color: rgba(0, 0, 0, 0.137);
+    height: 80px;
+    padding: auto auto;
+    width: 30%;
+    float: left;
+    position: relative;
+}
+.logo img{
+    width: 60px;
+    margin: 10px 20px;
+    float: left;
+    position: relative;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+}
+.logo h1{
+    float: left;
+    font-size: 24px;
+    margin: 25px 0;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+}
+.right-header{
+    background-color: rgba(0, 0, 0, 0.137);
+    height: 80px;
+    padding: auto auto;
+    width: 70%;
+    float: right;
+    position: relative;
+}
+/* start for menu ------------------- 1694*/
+.menu{
+    float: right;
+    margin: auto 20px;
+}
+.menu ul{
+    padding: 0;
+}
+.menu ul li{
+    display: inline-block;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: auto 5px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    transition: border-radius 1s, transform 1s, background-color 1s;
+}
+.menu ul li a{
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.menu ul li:hover{
+    border-radius: 10px;
+    transform: translate(2px, 2px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.menu ul li:active{
+    background-color: rgb(255, 0, 0);
+    transform: scale(2);
+}
+ul.submenu{
+    text-align: left;
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
+ul.submenu li{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.26);
+    padding: 10px;
+    margin: auto 5px;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+ul.submenu li a{
+    display: block;
+    padding: 5px 10px;
+}
+.menu ul li:hover ul.submenu li, .menu ul li:focus ul.submenu li{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+}
+/* end for menu ------------------- 1694*/
+.jumbotron{
+    width: 100%;
+    height: 80vh;
+    padding: 160px 40px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    background-color: #aaa;
+    background-image: url(images/background/photo9.jpg);
+    background-size: cover;
+}
+.jumbotron h1{
+    text-transform: uppercase;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    text-shadow: 0px 10px 5px #000000;
+    animation: h1 2s infinite alternate;
+    position: relative;
+    animation-timing-function: ease-in;
+}
+@keyframes h1{
+    from{transform: translateY(0px);}
+    to{transform: translateY(-35px); color: rgb(21, 95, 21);}
+}
+.jumbotron p{
+    text-shadow: 0px 2px 5px #000000;
+    animation: p1 5s 1;
+    position: relative;
+}
+@keyframes p1{
+    from{transform: translateX(-100px);}
+    to{transform: translateX(-0px);}
+}
+.jumbotron button, .tombol-ubah{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 150px;
+    height: 40px;
+    text-transform: uppercase;
+    color: rgb(50, 3, 94);
+    border: 1px dashed rgb(130, 5, 146);
+    border-radius: 5px;
+    transition: background-color, transform;
+    cursor: pointer;
+    animation: button1;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: initial;
+    animation-play-state: running;
+    animation-timing-function: ease-in;
+}
+@keyframes button1{
+    from{transform: scale(1);}
+    to{transform: scale(1.1);}
+}
+.jumbotron button:hover{
+    transition-duration: 1s;
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.815);
+    font-weight: bold;
+}
+.jumbotron button:focus{
+    transform: scale(0.1);
+}
+.content{
+    border: 0;
+}
+/* start for content -------------------- 1694 */
+.page2{
+    border: 0;
+    text-align: center;
+}
+.isi2{
+    display: inline-flex;
+    width: 100%;
+    height: auto;
+}
+/* >>>>>>>>>> start style for kotak*/
+.kotak{
+    width: 25%;
+    height: 450px;
+    padding: 20px 10px;
+    display: block;
+}
+/* <<<<<<<<<< end style for kotak*/
+.kotak-dalam{
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px 20px;
+}
+.isi2 img{
+    box-shadow: 2px 2px 10px 5px black;
+    transition: border-radius 2s, transform 2s;
+    margin-bottom: 20px;
+    width: 120px;
+    height: 120px;
+}
+.isi2 img:hover{
+    transform: scale(1.1);
+    border-radius: 50%;
+}
+.isi2 img:active{
+    transform: scale(0.5);
+}
+.isi2 p{
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.page3{
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    border: 1px dashed white;
+    padding: 30px 10px;
+    background-color: rgba(0, 0, 0, 0.349);
+}
+.page3 img{
+    width: 180px;
+    height: 180px;
+    size: initial;
+    box-shadow: 0 1px 10px 10px black;
+}
+.page3 h1{
+    margin-top: 10px;
+    text-shadow: 5px 5px 2px black;
+    text-transform: uppercase;
+}
+.page3 li{
+    list-style: none;
+}
+.page4{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2%;
+    text-align: center;
+    padding: 30px 10px;
+}
+.page4 h1{
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgb(130, 5, 146), 5px 5px 2px black;
+    text-transform: uppercase;
+    font-size: 48px;
+    color: rgb(255, 255, 255);
+}
+.page4 img{
+    width: 240px;
+    height: 240px;
+    margin-left: 20px;
+    box-shadow: 0 0px 10px 10px #000000, 0 0px 10px 10px #ffffff;
+    border-radius: 0%;
+    transition: border-radius 2s, transform 1s;
+}
+.page4 img:hover{
+    border-radius: 25%;
+    transform: scale(0.8);
+}
+/* end for content -------------------- 1694 */
+/* start for footer -------------------- 1694 */
+.footer{
+    width: 100%;
+    height: 450px;
+}
+.kotak-footer{
+    position: relative;
+    width: 25%;
+    height: auto;
+    float: left;
+}
+.kotak-dalam-footer{
+    width: auto;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 20px;
+}
+.footer2, .footer4{
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.footer h3{
+    text-align: left;
+    text-decoration-line: underline;
+}
+.footer img{
+    box-shadow: 2px 2px 10px 5px black;
+    transition: transform 1s;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+}
+.footer img:hover{
+    transform: scale(0.9);
+}
+.footer p{
+    margin-top: 20px;
+    text-align: justify;
+}
+.copyright{
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0px;
+    font-style: italic;
+    text-align: center;
+}
+.copyright p{
+    transition: color 1s, font-size 1s;
+}
+.copyright p:hover{
+    color: rgb(169, 28, 173);
+    cursor: pointer;
+    font-size: 18px;
+}
+.footer2 li{
+    line-height: 40px;
+}
+form{
+    background: #0000009d;
+    padding: 10px;
+    border-radius: 4px;
+}
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px dashed rgb(255, 255, 255);
+    resize: none;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: background-color 2s, transform 1s;
+}
+input[type=text]:focus, select:focus, textarea:focus{
+    background-color: rgba(255, 255, 255, 0.212);
+    color: #ffffff;
+    transform: scale(1.05);
+}
+input[type=submit]{
+    background-color: #000000;
+    border: 1px dashed #ffffff9d;
+    width: 80px;
+    height: 40px;
+    color: #666666;
+    transition: transform 1s, background-color 1s;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color: #5c5c5c;
+    transform: scale(1.1);
+    color: #ffffff;
+}
+/* //////////////// end style for footer */
+.icon-animasi{
+    width: 40px;
+    height: 5px;
+    background-color: rgba(230, 11, 175, 0.459);
+    position: fixed;
+    left: 10px;
+    bottom: 3px;
+    animation: iconani 5s infinite alternate;
+    animation-timing-function: linear;
+}
+@keyframes iconani{
+    from{bottom: 5px; left: 0%; background-color: rgb(6, 22, 255);}
+    to{bottom: 5px; left: 100%; background-color: rgba(0, 238, 255, 0.829); width: 500px;}
+    
+}
+.tombol-up{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+.tombol-up img{
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) invert(1);
+    transition: transform 1s, filter 1s;
+    opacity: 0.5;
+    z-index: initial;
+}
+.tombol-up img:hover{
+    filter: brightness(0) invert(0);
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+/* end for footer -------------------- 1694 */
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* -------------start responsive design */
+/* ----------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 768px){
+    *{
+        margin: 0%;
+    }
+    body{
+        background-image: url('images/background/fabric.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+    header{
+        background-color: rgba(0, 0, 0, 0.349);
+    }
+    .left-header{
+        width: 40%;
+        height: auto;
+        
+    }
+    .logo img{
+        text-align: center;
+        float: left;
+    }
+    .logo h1{
+        text-align: center;
+        float: left;
+        margin: 25px 0;
+    }
+    .right-header{
+        width: 60%;
+        height: auto;
+    }
+    .menu li{
+        width: 60px;
+        height: auto;
+        text-align: center;
+        font-size: 8px;
+    }
+    .isi2, .isi-footer{
+        display: block;
+    }
+    .kotak, .kotak-footer, .page3, .footer1{
+        width: 100%;
+        height: auto;
+    }
+    .page4 img{
+        margin-bottom: 30px;
+        
+    }
+    .copyright{
+        display: none;
+    }
+    .icon-animasi{
+        display: none;
+    }
+
+}
+@media only screen and (max-width: 480px){
+    [class*="col-"]{
+        width: 100%;
+    }
+    body{
+        background-image: url('images/background/black-bg2.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .private p{
+        display: none;
+    }
+    .header{
+        height: 180px;
+    }
+    .left-header{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .logo img{
+        text-align: center;
+        float: none;
+    }
+    .logo h1{
+        text-align: center;
+        float: none;
+        margin: 0;
+    }
+    .right-header{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0;
+    }
+    .menu{
+        float: left;
+        margin: 0;
+        width: 100%;
+        position: relative;
+    }
+    .menu ul{
+        padding: 0;
+        background:black;
+        margin: 0;
+    }
+    .menu ul li{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    ul.submenu{
+        position: relative;
+        height: 100%;
+    }
+   .isi2, .footer{
+       display: block;
+   }
+   .kotak, .kotak-footer, .page3, .footer1{
+       width: 100%;
+       height: auto;
+   }
+   .page4 img{
+       margin-bottom: 30px;
+       width: 90%;
+   }
+   .icon-animasi{
+       display: none;
+   }
+   .copyright{
+       display: none;
+   }
+}
